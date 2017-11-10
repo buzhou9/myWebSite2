@@ -10,8 +10,8 @@ module.exports = merge(common, {
 	             changeOrigin: true,
 	             pathRewrite: {'^/api': ''}
 	         },
-	         '/pad/': {
-	             target: 'http://192.168.1.20:8080',
+	         '/views/': {
+	             target: 'http://192.168.1.20:8081',
 	             secure: false,
 	             changeOrigin: true,
 	             pathRewrite: {'^/api': ''}

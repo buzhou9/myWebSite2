@@ -36,3 +36,18 @@ body{
 	max-width: 100%;
 	margin: auto;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+	html{
+		font-size: 10px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	html{
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 992px){
+	html{
+		font-size: 40px;
+	}
+}

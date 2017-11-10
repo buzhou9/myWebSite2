@@ -1,11 +1,8 @@
-import '../../styles/common/style.css';
 import '../../styles/common/font_icon.css';
 import '../../styles/page/index.css';
-import {cssAdapterCom} from '../components/cssAdapter.js';
-
-cssAdapterCom();
+import {animateControl} from '../components/commonTool.js';
+animateControl();
 const pageResize=function(){
-	cssAdapterCom();
 	let headerBg=document.getElementById('header-bg');
 	let parent=headerBg.parentNode;
 	var str='?x-oss-process=image/resize,m_fill,h_'+parent.clientHeight+',w_'+parent.clientWidth;
@@ -19,10 +16,10 @@ window.onresize=pageResize;
 	let openLogin=document.getElementById('open-login');
 	let loginBg=document.querySelector('.login-bg');
 	openLogin.addEventListener('tap',function(){
-		loginBg.style.display='block';
+		switchDisplayDide(loginBg,'show');
 	});
 	document.getElementById('login-bg-close').addEventListener('tap',function(){
-		loginBg.style.display='none';
+		switchDisplayDide(loginBg,'hide');
 	});
 	document.getElementById('login-sub').addEventListener('tap',function(){
 		//获取表单数据
@@ -45,13 +42,13 @@ window.onresize=pageResize;
 			type:'post',//HTTP请求类型
 			success:function(data){
 				if(data.result=='success'){
-					
+					alert(data.message);
 				}else{
 					alert(data.message);
 				}
 			},
 			error:function(xhr,type,errorThrown){
-				
+				alert(errorThrown);
 			}
 		});
 	});
