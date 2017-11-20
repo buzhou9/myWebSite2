@@ -51,3 +51,35 @@ body{
 		font-size: 40px;
 	}
 }
+.webBtn-save{
+	padding: 7px 20px;
+	border: #ccc;
+	color: #F0F0F0;
+	font-size: 13px;
+	border-radius: 3px;
+	background-color: #FE413B;
+	cursor: pointer;
+	outline: none;
+  background-image: linear-gradient(-180deg, #fe6864 0%, #FE413B 90%);
+  -webkit-user-select: none;
+	-moz-user-select: none;
+}
+.webBtn-save:active {
+	background-image: linear-gradient(-180deg, #FE413B 0%, #FE413B 90%);
+  position:relative;
+  top:1px;
+}
+.iconfont{
+	font-size: 20px;
+}
+.iconfont.icon-load{
+	animation:rotation 0.5s linear infinite;
+}
+@keyframes rotation{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}

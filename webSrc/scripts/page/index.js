@@ -1,4 +1,5 @@
 import '../../styles/common/font_icon.css';
+import '../../styles/common/header.css';
 import '../../styles/page/index.css';
 import {animateControl} from '../components/commonTool.js';
 animateControl();
