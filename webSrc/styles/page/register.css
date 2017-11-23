@@ -62,6 +62,12 @@ body{
 	box-shadow:0px 0px 7px #328bf0;
 	border-color: rgb(3,102,214);
 }
+.icon-error{
+	color: #FF0000;
+}
+.icon-correct{
+	color: #2AC845;
+}
 .register-sub{
 	margin-left: 5px;
 }

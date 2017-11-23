@@ -1,6 +1,5 @@
 import { cssAdapter } from '../components/cssAdapter.js';
 import { milkyWay } from '../components/milkyWay.js';
-import '../../styles/common/bodyBackColor.css';
 
 milkyWay('canvas');
 cssAdapter();

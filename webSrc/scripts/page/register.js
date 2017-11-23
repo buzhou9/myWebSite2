@@ -1,10 +1,13 @@
 import '../../styles/common/header.css';
 import '../../styles/common/font_icon.css';
 import '../../styles/page/register.css';
+import {openCover} from '../components/commonTool.js';
+window.openCover=openCover;
 {
-	document.getElementById('register-sub').onclick=function(){
+	document.getElementById('register-sub').addEventListener('tap',function(){
 		var userName=document.getElementById('userName').value;
 		var password=document.getElementById('password').value;
+		var password1=document.getElementById('password1').value;
 		var re=/\S/;
 		if(!re.test(userName)){
 			alert('用户名不能为空！');
@@ -14,7 +17,16 @@ import '../../styles/page/register.css';
 			alert('密码不能为空！');
 			return false;
 		}
-		mui.ajax('/user/register',{
+		if(!re.test(password1)){
+			alert('重输入密码不能为空！');
+			return false;
+		}
+		if(password1!=password){
+			alert('两次输入密码不一致！');
+			return false;
+		}
+		openCover('loading','show');
+		mui.ajax('/server/user/register',{
 			data:{
 				userName:userName,
 				password:password
@@ -22,13 +34,39 @@ import '../../styles/page/register.css';
 			dataType:'json',//服务器返回json格式数据
 			type:'post',//HTTP请求类型
 			success:function(data){
-				alert(data.message);
+				if(data.result=='success'){
+					let result=confirm('注册成功！是否立即登录！');
+					if(result){
+						mui.ajax('/server/user/login',{
+							data:{
+								userName:userName,
+								password:password
+							},
+							dataType:'json',//服务器返回json格式数据
+							type:'post',//HTTP请求类型
+							success:function(data){
+								if(data.result=='success'){
+									window.location.href='./index.html';
+								}else{
+									alert(data.message);
+								}
+							},
+							error:function(xhr,type,errorThrown){
+								alert(errorThrown);
+							}
+						});
+					}else{
+						window.location.href='./index.html';
+					}
+				}else{
+					alert(data.message);
+				}
 			},
 			error:function(xhr,type,errorThrown){
 				
 			}
 		});
-	}
+	});
 	let $username=document.querySelector('#register-form input[name="username"]');
 	$username.onchange=function(){
 		let $iconLoad=this.nextElementSibling;

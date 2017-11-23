@@ -16,4 +16,36 @@ function switchDisplayDide(elme,str){
 function animateControl(){
 	window.switchDisplayDide=switchDisplayDide;
 }
-export {animateControl};
+function openCover(type,ctr){
+	let _this=this;
+	if(_this==undefined){
+		var elme=document.createElement('div');
+		elme.classList.add('fixdCover');
+		if(type=='loading'){
+			elme.classList.add('loadCover');
+			elme.innerHTML=`<span class="icon-load iconfont"></span>`;
+		}
+		document.querySelector('body').appendChild(elme);
+		elme.openCover=openCover;
+		elme.inBody=true;
+		return elme;
+	}else{
+		let ctr=ctr||type;
+		if(ctr=='hide'){
+			_this.style.display='none';
+		}else{
+			if(ctr=='remove'){
+				_this.parentNode.removeChild(_this);
+				_this.inBody=false;
+			}else{
+				if(_this.inBody){
+					_this.style.display='block';
+				}else{
+					_this.style.display='block';
+					document.querySelector('body').appendChild(_this);
+				}
+			}
+		}
+	}
+}
+export {animateControl,openCover};
