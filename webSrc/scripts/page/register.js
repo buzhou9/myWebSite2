@@ -25,7 +25,7 @@ window.openCover=openCover;
 			alert('两次输入密码不一致！');
 			return false;
 		}
-		openCover('loading','show');
+		let cover=openCover('loading','show');
 		mui.ajax('/server/user/register',{
 			data:{
 				userName:userName,
@@ -45,6 +45,7 @@ window.openCover=openCover;
 							dataType:'json',//服务器返回json格式数据
 							type:'post',//HTTP请求类型
 							success:function(data){
+								cover.openCover('hide');
 								if(data.result=='success'){
 									window.location.href='./index.html';
 								}else{
@@ -59,6 +60,7 @@ window.openCover=openCover;
 						window.location.href='./index.html';
 					}
 				}else{
+					cover.openCover('hide');
 					alert(data.message);
 				}
 			},

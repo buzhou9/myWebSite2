@@ -1,0 +1,59 @@
+body{
+	background: #fafafb;
+}
+.PersonalInfo-bg{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 3rem;
+}
+.PersonalInfo-form .group{
+	display:flex;
+	align-items:  center;
+	margin-bottom: 30px;
+}
+.PersonalInfo-form label{
+	vertical-align: middle;
+	width: 70px;
+	font-size: 12px;
+	color: #999999;
+}
+.PersonalInfo-form .input-cont{
+	flex-grow: 1;
+}
+.PersonalInfo-form input{
+	height: 36px;
+	padding: 6px 9px;
+	font-size: 12px;
+	width: 300px;
+	vertical-align: middle;
+	margin-bottom: 0 !important;
+	border-color: #e6e6e6;
+	color: #333333;
+}
+.PersonalInfo-form  .group-intro{
+	align-items: flex-start;
+}
+.PersonalInfo-form textarea{
+	height: 100px;
+	padding: 6px 9px;
+	font-size: 12px;
+	width: 300px;
+	vertical-align: middle;
+	margin-bottom: 0 !important;
+	border-color: #e6e6e6;
+	color: #333333;
+}
+.PersonalInfo-form input:hover{
+	border-color: #CCCCCC;
+}
+.PersonalInfo-form .iconfont{
+	display: none;
+}
+.PersonalInfo-form .group-sex input{
+	width: 20px;
+	height: 20px;
+}
+.PersonalInfo-form .group-sex label i{
+	font-size: 24px;
+}

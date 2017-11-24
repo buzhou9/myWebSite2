@@ -4,16 +4,54 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="/dll/css/mui.css"/>
 		<link rel="stylesheet" type="text/css" href="/dll/css/animate.css"/>
 		<link rel="stylesheet" type="text/css" href="/dll/css/style.css"/>
 	</head>
-	<body>
+	<body id="indexPage">
+		<!--公共头部-->
 		<header class="fullWidth">
 			<div class="tools">
 				<a class="noselect" id="open-registration" href="register.html">注册</a>
 				<a class="noselect" id="open-login">登录</a>
 			</div>
+			<div class="Personal">
+				<div class="cont">
+					<a href="#Personal-popover">
+						<img class="headImg" src="../img/defaultHeadImg.png"/>
+						<i class="iconfont icon-sanjiaoxing-copy"></i>
+					</a>
+				</div>
+			</div>
 		</header>
+		<div id="Personal-popover" class="mui-popover Personal-popover">
+			<div class="section1">
+				<em>Signed in as</em>
+				<p class="Personal-name"></p>
+			</div>
+			<div class="section2">
+				<p class="setting"><a href="personalInfo.html">设置</a></p>
+				<p class="signOut" id="signOut">退出</p>
+			</div>
+		</div>
+		<div class="login-bg body-bgCover animated">
+			<div class="login-cont" id="login-cont">
+				<h3 class="title">
+					登录
+					<span class="iconfont icon-close" id="login-bg-close"></span>
+				</h3>
+				<div class="userName">
+					<input placeholder="用户名" id="userName-val" type="text" name="" id="" value="" />
+				</div>
+				<div class="password">
+					<input placeholder="密码" id="password-val" type="password" name="" id="" value="" />
+				</div>
+				<div class="foot">
+					<button id="login-sub">登录</button>
+				</div>
+			</div>
+		</div>
+		
 		<div class="header-bg">
 			<img id="header-bg" class="" asrc="http://hxtbucket.oss-cn-shenzhen.aliyuncs.com/img/warren-wong-277326.jpg"/>
 		</div>
@@ -60,23 +98,6 @@
 			</div>
 			<div class="pageContent-item"></div>
 			<div class="pageContent-item"></div>
-		</div>
-		<div class="login-bg body-bgCover animated">
-			<div class="login-cont" id="login-cont">
-				<h3 class="title">
-					登录
-					<span class="iconfont icon-close" id="login-bg-close"></span>
-				</h3>
-				<div class="userName">
-					<input placeholder="用户名" id="userName-val" type="text" name="" id="" value="" />
-				</div>
-				<div class="password">
-					<input placeholder="密码" id="password-val" type="password" name="" id="" value="" />
-				</div>
-				<div class="foot">
-					<button id="login-sub">登录</button>
-				</div>
-			</div>
 		</div>
 		<script src="../dll/js/mui.js" type="text/javascript" charset="utf-8"></script>
 	</body>

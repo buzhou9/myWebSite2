@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+		<link rel="stylesheet" type="text/css" href="/dll/css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="/dll/css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="/dll/css/style.css"/>
+	</head>
+	<body>
+		<!--公共头部-->
+		<header class="fullWidth">
+			<div class="tools">
+				<a class="noselect" id="open-registration" href="register.html">注册</a>
+				<a class="noselect" id="open-login">登录</a>
+			</div>
+			<div class="Personal">
+				<div class="cont">
+					<a href="#Personal-popover">
+						<img class="headImg" src="../img/defaultHeadImg.png"/>
+						<i class="iconfont icon-sanjiaoxing-copy"></i>
+					</a>
+				</div>
+			</div>
+		</header>
+		<div id="Personal-popover" class="mui-popover Personal-popover">
+			<div class="section1">
+				<em>Signed in as</em>
+				<p class="Personal-name"></p>
+			</div>
+			<div class="section2">
+				<p class="setting"><a href="personalInfo.html">设置</a></p>
+				<p class="signOut" id="signOut">退出</p>
+			</div>
+		</div>
+		<div class="login-bg body-bgCover animated">
+			<div class="login-cont" id="login-cont">
+				<h3 class="title">
+					登录
+					<span class="iconfont icon-close" id="login-bg-close"></span>
+				</h3>
+				<div class="userName">
+					<input placeholder="用户名" id="userName-val" type="text" name="" id="" value="" />
+				</div>
+				<div class="password">
+					<input placeholder="密码" id="password-val" type="password" name="" id="" value="" />
+				</div>
+				<div class="foot">
+					<button id="login-sub">登录</button>
+				</div>
+			</div>
+		</div>
+		<div class="PersonalInfo-bg">
+			<div class="PersonalInfo-cont">
+				<form class="PersonalInfo-form" id="PersonalInfo-form">
+					<div class="group">
+						<label>昵称</label>
+						<div class="input-cont">
+							<input type="text" name="likeName" id="likeName" value="" />
+							<span  class="iconfont icon-load"></span>
+							<span  class="iconfont icon-error"></span>
+						</div>
+					</div>
+					<div class="group">
+						<label>年龄</label>
+						<div class="input-cont">
+							<input type="text" name="" id="age" value="" />
+						</div>
+					</div>
+					<div class="group group-sex">
+						<label>性别</label>
+						<div class="input-cont">
+							<span class="iconfont icon-xingbienan"></span>
+							<input type="radio" name="sex" value="" />
+							<input type="radio" name="sex"  value="" />
+						</div>
+					</div>
+					<div class="group">
+						<label>联系邮箱</label>
+						<div class="input-cont">
+							<input type="email" name="email" id="email" value="" />
+						</div>
+					</div>
+					<div class="group group-intro">
+						<label>个性签名</label>
+						<div class="input-cont">
+							<textarea id="intro"></textarea>
+						</div>
+					</div>
+				</form>
+				<button class="register-sub webBtn-save" id="register-sub">注册</button>
+			</div>
+		</div>
+		<script src="../dll/js/mui.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

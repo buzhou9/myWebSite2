@@ -6,7 +6,6 @@ header{
 	top: 0;
 	left: 0;
 	height:44px;
-	overflow: hidden;
 	z-index: 666;
 	width: 100%;
 }
@@ -29,3 +28,155 @@ header .tools a{
 	cursor: pointer;
 	padding-left: 10px;
 }
+header .Personal{
+	width: 100%;
+	height: 44px;
+	padding: 0 0.7rem;
+	background: #50616d;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+header .Personal .cont{
+	float: right;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+}
+header .Personal .headImg{
+	width:35px;
+	height:35px;
+	border-radius: 50%;
+	background: #C0C0C0;
+}
+header .Personal i{
+	color: #FFFFFF;
+}
+.Personal-popover{
+	width: 120px;
+}
+.Personal-popover .section1{
+	padding:10px 15px;
+}
+.Personal-popover .section1 em{
+	color: #8F8F94;
+	font-size: 14px;
+	padding:0 5px;
+}
+.Personal-popover .section1 p{
+	color: #333333;
+	font-size: 16px;
+	padding:0 5px;
+}
+.Personal-popover .section2{
+	padding:10px 15px;
+	position: relative;
+}
+.Personal-popover .section2:before{
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: #C8C7CC;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.Personal-popover .section2 p{
+	color: #161823;
+	font-size: 14px;
+	padding:5px;
+}
+.Personal-popover .section2 p:hover{
+	background: #777777;
+	color: #F2F2F2;
+	cursor: pointer;
+}
+.mui-backdrop.mui-active{
+	background: transparent;
+}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	header .Personal i{
+		display: none;
+	}
+}
+.login-bg{
+	display: none;
+}
+.login-cont{
+	width:360px;
+	height: 240px;
+	padding:60px 40px;
+	background: #FFFFFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -120px;
+	margin-left: -180px;
+}
+.login-cont input{
+	margin-bottom: 0 !important;
+}
+.login-cont .title{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 40px;
+	width: 100%;
+	color: #FFFFFF;
+	font-weight: normal;
+	line-height: 40px;
+	text-align: center;
+	background: #000000;
+}
+.login-cont .title span{
+	position: absolute;
+	top: 50%;
+	line-height:normal;
+	right: 5px;
+	padding: 5px;
+	margin-top: -15px;
+	cursor: pointer;
+}
+.login-cont .title span:before{
+	font-size: 20px;
+	line-height: normal;
+}
+.login-cont .userName,
+.login-cont .password{
+	width: 100%;
+	border: 1px solid #a1afc9;
+	margin-bottom: 10px;
+}
+.login-cont input{
+	width: 100%;
+	padding: 15px;
+	font-size: 14px;
+	border: none;
+	outline: none;
+	background: #F0F0F0;
+}
+.login-cont .foot{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login-cont button{
+	background: #161823;
+	font-size: 14px;
+	padding:7px 18px;
+	color: #FFFFFF;
+	border: none;
+	text-indent:0.5em;
+	letter-spacing:0.5em;
+	text-align: center;
+	cursor: pointer;
+}
+
