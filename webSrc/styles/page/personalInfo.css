@@ -7,6 +7,14 @@ body{
 	justify-content: center;
 	padding-top: 3rem;
 }
+.PersonalInfo-cont{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.PersonalInfo-form{
+	width: 100%;
+}
 .PersonalInfo-form .group{
 	display:flex;
 	align-items:  center;
@@ -49,6 +57,20 @@ body{
 }
 .PersonalInfo-form .iconfont{
 	display: none;
+}
+.group-sex .input-cont{
+	display: flex;
+}
+.group-sex .iconfont{
+	display: block;
+	font-size: 24px;
+}
+.group-sex .icon-xingbienan{
+	color:#4cafc4;
+	margin-right: 10px;
+}
+.group-sex .icon-xingbie-nv{
+	color:#ee669f ;
 }
 .PersonalInfo-form .group-sex input{
 	width: 20px;

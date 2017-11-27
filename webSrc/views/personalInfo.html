@@ -57,7 +57,7 @@
 					<div class="group">
 						<label>昵称</label>
 						<div class="input-cont">
-							<input type="text" name="likeName" id="likeName" value="" />
+							<input type="text" name="nickname" id="nickname" value="" />
 							<span  class="iconfont icon-load"></span>
 							<span  class="iconfont icon-error"></span>
 						</div>
@@ -71,9 +71,12 @@
 					<div class="group group-sex">
 						<label>性别</label>
 						<div class="input-cont">
-							<span class="iconfont icon-xingbienan"></span>
-							<input type="radio" name="sex" value="" />
-							<input type="radio" name="sex"  value="" />
+							<label class="iconfont icon-xingbienan">
+								<input type="radio" name="sex" value="" />
+							</label>
+							<label class="iconfont icon-xingbie-nv">
+								<input type="radio" name="sex"  value="" />
+							</label>
 						</div>
 					</div>
 					<div class="group">
@@ -88,10 +91,17 @@
 							<textarea id="intro"></textarea>
 						</div>
 					</div>
+					<div class="group group-intro">
+						<label>头像</label>
+						<div class="input-cont">
+							<p>仅支持JPG、PNG格式，文件小于1M(方形图)</p>
+							<div class="form-headPic"></div>
+						</div>
+					</div>
 				</form>
-				<button class="register-sub webBtn-save" id="register-sub">注册</button>
+				<button class="PersonalInfo-sub webBtn-save" id="PersonalInfo-sub">保存</button>
 			</div>
 		</div>
-		<script src="../dll/js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/dll/js/mui.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

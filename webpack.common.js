@@ -12,7 +12,7 @@ var config = {
 	entry: entries,
     output: { 
         path:path.resolve(__dirname, 'build'), //输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
-       // publicPath:'../', // 所有静态资源的连接都会加上这里写的固定目录，如果不设置publicPath的值，打包的时候会自动生成相对路径
+       	//publicPath:'./', // 所有静态资源的连接都会加上这里写的固定目录，如果不设置publicPath的值，打包的时候会自动生成相对路径
         filename: 'js/[name].js',            //每个页面对应的主js的生成配置
         chunkFilename: 'js/[id].chunk.js'   //chunk生成的配置
     },
